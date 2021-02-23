@@ -14,22 +14,25 @@
  *= require_self
  */
 
- h1{
-     text-align: center;
- }
+h1 {
+  text-align: center;
+}
 
- ul{
-     list-style: none;
-     display: flex;
-     justify-content: center;
- }
+.container {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
 
- li{
-    padding: 10px;
-    border : solid 1px;
-    margin: 20px;
- }
+body {
+  text-align: center;
+}
 
- body {
-     text-align: center;
- }
+.card {
+  margin: 20px;
+  width: 20%;
+}
+
+.card-body {
+
+}

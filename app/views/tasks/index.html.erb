@@ -1,12 +1,14 @@
-<h1>My Tasks</h1>
+
 <div class="container">
-<ul>
-<% @tasks.each do |task| %>
-   <li><span class = "title"><%= link_to "#{task.title}", "/tasks/#{task[:id]};" %></span> 
-   <%= task.completed ? "[x]" : "[ ]" %>  <%= link_to "Delete",
-            task_path(task.id),
-            method: :delete,
-            data: { confirm: "Are you sure?" } %> </li>
-<% end %>
-</ul>
+  <% @tasks.each do |task| %>
+    <div class="card">
+    <div class="card-body">
+      <H2 class="card-title"><%=task.title%></H2>
+      <p><%= link_to "More", "/tasks/#{task[:id]};" %></P>
+      <div class="card-link" >
+          <%= link_to "Delete", task_path(task.id), method: :delete, data: { confirm: "Are you sure?" } %> 
+      </div>
+    </div>
+    </div>
+  <% end %>
 </div>
