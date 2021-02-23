@@ -2,7 +2,7 @@
 <div class="container">
 <ul>
 <% @tasks.each do |task| %>
-   <li><span class = "title"><%= task.title %></span> <%= task.completed ? "[x]" : "[ ]" %></li>
+   <li><span class = "title"><%= link_to "#{task.title}", "/tasks/#{task[:id]};" %></span> <%= task.completed ? "[x]" : "[ ]" %></li>
 <% end %>
 </ul>
 </div>
