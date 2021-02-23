@@ -8,4 +8,7 @@
 <%= "[ ] This task is not ok" %>
 <% end %>
 
+<p><div class='btn'><%=link_to "modify", tasks_edit_path(@task[:id]) %> </p></div> </p>
+
+
  <p>   <%= link_to "Go back", "/tasks" %> </p>
